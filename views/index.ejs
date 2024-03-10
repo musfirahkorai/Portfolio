@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+      <style>
+          @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* Reset */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color:rgb(253, 216, 53);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+.logo {
+    font-size: 2rem;
+    color: white;
+    text-align: left;
+}
+
+.logo {
+    font-family: 'BigFont', sans-serif;
+}
+
+nav a {
+    font-family: 'StableFont', sans-serif;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: grey;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: transform 0.3s;
+}
+
+nav a:hover::before {
+    transform: scaleX(1);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Color Variables */
+:root {
+  --dark: rgb(20, 20, 20);
+  --yellow: rgb(253, 216, 53);
+  --blue: rgb(98, 0, 234);
+  --left-color: var(--yellow);
+  --right-color: var(--dark);
+}
+
+/* Base Styles */
+body,
+main {
+  background-color: var(--dark);
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Typography */
+.hero-wrapper,
+.hero-side .title,
+.cool > .letter {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Layout */
+.hero-wrapper,
+.hero-side {
+  height: 100%;
+}
+
+.hero-side {
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  position: absolute;
+  width: 100%;
+}
+
+/* Hero Titles */
+.hero-side .title {
+  font-size: 8vw;
+  margin: 0px 10vw;
+  width: 80vw;
+}
+
+/* Cool Text */
+.hero-side .cool {
+  font-size: 1.3em;
+  line-height: 0.8em;
+}
+
+.cool > .letter {
+  display: inline-block;
+  transition: transform 350ms ease;
+}
+
+/* Hover Effects */
+.cool:hover > .letter {
+  transition-duration: 800ms;
+}
+
+.cool:hover > .letter:nth-child(n) {
+  transform: translate(0%, 20%) rotate(-3deg);
+}
+
+/* Side Specific Styles */
+#left-side {
+  background-color: var(--left-color);
+  width: 90%;
+  z-index: 2;
+  transition: 0.15s;
+  color: white;
+}
+
+#left-side .cool {
+  color: var(--right-color);
+}
+
+#right-side {
+  background-color: var(--right-color);
+}
+
+#right-side .title {
+  color: var(--yellow);
+}
+
+#right-side .cool,
+#last-name {
+  color: white;
+}
+
+#first-name {
+  color: var(--dark);
+}
+                        
+
+      </style>
+
+</head>
+<body>
+  <nav class="navbar">
+    <h2 class="logo">Portfolio</h2>
+    <ul class="nav-links">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About Me">About Me</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#My Projects">My Projects</a></li>
+        <li><a href="#ContactMe">Contact</a></li>
+    </ul>
+</nav>
+<main>
+  <section class="hero-wrapper">
+    <!-- Left Side -->
+    <article id="left-side" class="hero-side">
+      <h1 class="title">
+        I'm a <span data-value="FRONTEND" id="frontend" class="cool">FRONTEND</span> noob
+      </h1>
+      <a href="/" class="name" id="first-name" aria-label="First Name: Noob">Noob</a>
+    </article>
+    <!-- Right Side -->
+    <article id="right-side" class="hero-side">
+      <h1 class="title">
+        I'm a <span data-value="BACKEND" id="backend" class="cool">BACKEND</span> Developer
+      </h1>
+      <a href="/" class="name" id="last-name" aria-label="Last Name: Coder">Coder</a>
+    </article>
+  </section>
+</main>
+
+<section class="about-me" id="about-me">
+  <div class="container">
+    <div class="about-me-container">
+      <div class="about-me-title">
+        About <br> Musfira Murtaza
+      </div>
+
+      <div class="about-me-flex-container">
+        <div class="about-me-image">
+          <div class="back-div"></div>
+          <div class="black-image"><img src="https://unsplash.com/photos/macbook-pro-turned-on-Bd7gNnWJBkU" alt="black"></div>
+          <div class="main-image"><img src="https://unsplash.com/photos/turned-on-laptop-on-table-HyTwtsk8XqA" alt="smit"></div>
+        </div>
+        <div class="about-me-content">
+
+          <div class="logo"><img src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/20391be8bf1ed24ef0e5da066bf68a5f6ee78fa1/images/logo.svg" alt="smit"></div>
+
+          <div class="text">
+            Greetings, I'm Musfira Murtaza, I am 12 years old, a software engineer passionate about exploring the ever-evolving world of technology. 
+            <br><br>
+            I thrive on embracing new challenges, mastering cutting-edge tools, and creating innovative solutions. Let's connect and embark on this exciting journey together!
+          </div>
+        </div>
+      </div>
+
+      <div class="mail-button mail-button2">
+        <a href="mailto:prajapatismit2906@gmail.com"><img src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/20391be8bf1ed24ef0e5da066bf68a5f6ee78fa1/images/mail.svg" alt="mail"></a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<br><br>
+<div class = "portfolio-link">
+  <a href="https://smit-prajapati.github.io/prajapatismit/" target="_blank"> My Portfolio </a>
+</div>
+
+            <script>
+                                                  // Access the left-side element
+const leftSideElement = document.getElementById("left-side");
+
+// Handles mouse and touch movement to adjust the width of the left-side element
+const handleMovement = (event) => {
+  const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+  const newWidthPercentage = (clientX / window.innerWidth) * 100;
+  leftSideElement.style.width = `${newWidthPercentage}%`;
+};
+
+// Attach movement handlers for both mouse and touch events
+document.addEventListener("mousemove", handleMovement);
+document.addEventListener("touchmove", (event) => handleMovement(event));
+
+// Function to animate text change on mousemove over the backend element
+const animateTextChange = (event) => {
+  const targetElement = event.target;
+  let iterations = 0;
+  const interval = setInterval(() => {
+    targetElement.innerText = targetElement.innerText
+      .split("")
+      .map((char, index) =>
+        index < iterations ? targetElement.dataset.value[index] : randomSign()
+      )
+      .join("");
+    if (iterations >= targetElement.dataset.value.length)
+      clearInterval(interval);
+    iterations++;
+  }, 30);
+};
+
+// Generate a random sign from the alphabet
+const randomSign = () =>
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[Math.floor(Math.random() * 26)];
+
+// Enhance text by wrapping each letter in a span with class 'letter'
+const enhanceTextWithSpans = (id) => {
+  const element = document.getElementById(id);
+  const letters = element.innerText.split("");
+  element.innerText = "";
+  letters.forEach((letter) => {
+    const span = document.createElement("span");
+    span.className = "letter";
+    span.innerText = letter;
+    element.appendChild(span);
+  });
+};
+
+// Initialize text enhancement and attach text animation handler
+document
+  .getElementById("backend")
+  .addEventListener("mousemove", animateTextChange);
+enhanceTextWithSpans("frontend");
+
+            </script>                                   
+</body>
+</html>
